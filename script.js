@@ -263,11 +263,37 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Mobile menu toggle (for future enhancement)
+// Mobile menu toggle
 function toggleMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    
     navMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
 }
+
+// Close mobile menu when clicking on a nav link
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    const navMenu = document.querySelector('.nav-menu');
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
+        });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = document.querySelector('.navigation').contains(event.target);
+        if (!isClickInsideNav && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
+        }
+    });
+});
 
 // Animation on scroll (simple fade-in effect)
 function animateOnScroll() {
@@ -298,6 +324,55 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 window.addEventListener('scroll', animateOnScroll);
+
+// Gallery functionality
+let currentImageIndex = 0;
+const galleryImages = document.querySelectorAll('.gallery-image');
+const indicators = document.querySelectorAll('.indicator');
+
+function showImage(index) {
+    // Hide all images
+    galleryImages.forEach(img => img.classList.remove('active'));
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    
+    // Show selected image
+    if (galleryImages[index]) {
+        galleryImages[index].classList.add('active');
+        indicators[index].classList.add('active');
+        currentImageIndex = index;
+    }
+}
+
+function changeImage(direction) {
+    const totalImages = galleryImages.length;
+    let newIndex = currentImageIndex + direction;
+    
+    if (newIndex >= totalImages) {
+        newIndex = 0;
+    } else if (newIndex < 0) {
+        newIndex = totalImages - 1;
+    }
+    
+    showImage(newIndex);
+}
+
+function currentImage(index) {
+    showImage(index - 1); // Convert to 0-based index
+}
+
+// Auto-play gallery (optional)
+function autoPlayGallery() {
+    changeImage(1);
+}
+
+// Initialize gallery when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Set up auto-play (change image every 5 seconds)
+    setInterval(autoPlayGallery, 5000);
+    
+    // Initialize first image
+    showImage(0);
+});
 
 // WhatsApp button functionality
 document.addEventListener('DOMContentLoaded', function() {
