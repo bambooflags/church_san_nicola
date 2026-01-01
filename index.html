@@ -4,8 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parafia Prawosławna Św. Mikołaja w Toruniu</title>
+    <meta name="description" content="Parafia Prawosławna pw. Św. Mikołaja w Toruniu - nabożeństwa w soboty 17:00 i niedziele 11:00. Orthodox Parish of St. Nicholas in Toruń, Poland.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Parafia Prawosławna Św. Mikołaja w Toruniu">
+    <meta property="og:description" content="Żywe centrum prawosławia w Toruniu. Nabożeństwa: soboty 17:00, niedziele 11:00. ul. Podgórna 69.">
+    <meta property="og:image" content="https://www.cerkiewtorun.pl/church.jpeg">
+    <meta property="og:url" content="https://www.cerkiewtorun.pl">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pl_PL">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.cerkiewtorun.pl/">
+
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Church",
+      "name": "Parafia Prawosławna Św. Mikołaja w Toruniu",
+      "alternateName": "Orthodox Parish of St. Nicholas in Toruń",
+      "url": "https://www.cerkiewtorun.pl",
+      "telephone": "+48606910655",
+      "email": "kshajduczenia@tlen.pl",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Podgórna 69",
+        "addressLocality": "Toruń",
+        "postalCode": "87-100",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.0138,
+        "longitude": 18.6056
+      },
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "17:00", "closes": "19:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "13:00"}
+      ]
+    }
+    </script>
 </head>
 <body>
     <header class="header">
@@ -15,7 +57,7 @@
                 <h1 class="church-name" data-key="church-name">Parafia Prawosławna Św. Mikołaja w Toruniu</h1>
             </div>
             <nav class="navigation">
-                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu nawigacji">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -27,7 +69,7 @@
                     <li><a href="#contact" data-key="nav-contact">Kontakt</a></li>
                 </ul>
                 <div class="language-selector">
-                    <select id="language-select">
+                    <select id="language-select" aria-label="Wybierz język">
                         <option value="pl">Polski</option>
                         <option value="en">English</option>
                         <option value="uk">Українська</option>
@@ -43,9 +85,9 @@
         <section id="home" class="hero">
             <div class="hero-background">
                 <img src="church.jpeg" alt="Orthodox Church of St. Nicholas in Toruń" class="hero-bg-image active">
-                <img src="inside.jpeg" alt="Interior of Orthodox Church of St. Nicholas" class="hero-bg-image">
-                <img src="image1.jpeg" alt="Church photo 1" class="hero-bg-image">
-                <img src="image2.jpeg" alt="Church photo 2" class="hero-bg-image">
+                <img src="inside.jpeg" alt="Interior of Orthodox Church of St. Nicholas" class="hero-bg-image" loading="lazy">
+                <img src="image1.jpeg" alt="Ikonostas cerkwi św. Mikołaja w Toruniu" class="hero-bg-image" loading="lazy">
+                <img src="image2.jpeg" alt="Wnętrze drewnianej cerkwi prawosławnej" class="hero-bg-image" loading="lazy">
             </div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
@@ -60,8 +102,8 @@
                     <span class="indicator" onclick="currentImage(4)"></span>
                 </div>
             </div>
-            <button class="hero-nav hero-prev" onclick="changeImage(-1)">‹</button>
-            <button class="hero-nav hero-next" onclick="changeImage(1)">›</button>
+            <button class="hero-nav hero-prev" onclick="changeImage(-1)" aria-label="Poprzednie zdjęcie">‹</button>
+            <button class="hero-nav hero-next" onclick="changeImage(1)" aria-label="Następne zdjęcie">›</button>
         </section>
 
         <section id="about" class="about">
@@ -84,7 +126,7 @@
                             <p data-key="current-building-text">Obecna drewniana cerkiew parafialna została ukończona i konsekrowana w 1929 roku. Budynek pierwotnie został zbudowany w 1839 roku i został zaadaptowany z dawnego budynku klasztornego w 1939 roku.</p>
                         </div>
                     </div>
-                    <img src="inside.jpeg" alt="Interior of Orthodox Church of St. Nicholas" class="about-image">
+                    <img src="inside.jpeg" alt="Interior of Orthodox Church of St. Nicholas" class="about-image" loading="lazy">
                 </div>
             </div>
         </section>
@@ -141,7 +183,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="image1.jpeg" alt="Contact photo" class="contact-image">
+                    <img src="image1.jpeg" alt="Widok cerkwi prawosławnej w Toruniu" class="contact-image" loading="lazy">
                 </div>
             </div>
         </section>
