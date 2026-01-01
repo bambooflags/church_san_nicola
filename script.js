@@ -6,7 +6,6 @@ const translations = {
         'nav-about': 'O Nas',
         'nav-services': 'Nabożeństwa',
         'nav-contact': 'Kontakt',
-        'nav-news': 'Aktualności',
         'hero-title': 'Parafia Prawosławna Św. Mikołaja w Toruniu',
         'hero-subtitle': 'Żywe centrum prawosławia w Toruniu, bogate w historię i duchowe piękno',
         'about-title': 'Historia Parafii',
@@ -28,11 +27,6 @@ const translations = {
         'priest': 'Proboszcz',
         'phone': 'Telefon',
         'email': 'Email',
-        'news-title': 'Aktualności',
-        'news-item-1-title': 'Nadchodzące święto',
-        'news-item-1-text': 'Informacja o nadchodzącym ważnym wydarzeniu w parafii...',
-        'news-item-2-title': 'Renowacja cerkwi',
-        'news-item-2-text': 'Aktualne informacje o pracach renowacyjnych w cerkwi...',
         'footer-parish': 'Parafia Prawosławna Św. Mikołaja',
         'footer-jurisdiction': 'Jurysdykcja',
         'footer-jurisdiction-text': 'Diecezja Łódzko-Poznańska',
@@ -46,7 +40,14 @@ const translations = {
         'benefit-2': 'Zmiany w harmonogramie nabożeństw',
         'benefit-3': 'Przypomnienia o świętach i uroczystościach',
         'whatsapp-button': 'Dołącz do grupy WhatsApp',
-        'whatsapp-note': 'Kliknij aby wysłać wiadomość i dołączyć do grupy'
+        'whatsapp-note': 'Kliknij aby wysłać wiadomość i dołączyć do grupy',
+        'facebook-title': 'Odwiedź nas na Facebooku',
+        'facebook-description': 'Dołącz do naszej grupy na Facebooku, aby być częścią naszej wspólnoty online, dzielić się zdjęciami i uczestniczyć w dyskusjach.',
+        'facebook-benefit-1': 'Dołącz do wspólnoty parafialnej',
+        'facebook-benefit-2': 'Zdjęcia z wydarzeń i nabożeństw',
+        'facebook-benefit-3': 'Dyskusje i wymiana doświadczeń',
+        'facebook-button': 'Dołącz do grupy Facebook',
+        'facebook-note': 'Kliknij aby odwiedzić naszą grupę'
     },
     en: {
         'church-name': 'St. Nicholas Orthodox Parish in Toruń',
@@ -54,7 +55,6 @@ const translations = {
         'nav-about': 'About Us',
         'nav-services': 'Services',
         'nav-contact': 'Contact',
-        'nav-news': 'News',
         'hero-title': 'St. Nicholas Orthodox Parish in Toruń',
         'hero-subtitle': 'A vibrant center of Orthodoxy in Toruń, rich in history and spiritual beauty',
         'about-title': 'Parish History',
@@ -76,11 +76,6 @@ const translations = {
         'priest': 'Parish Priest',
         'phone': 'Phone',
         'email': 'Email',
-        'news-title': 'News',
-        'news-item-1-title': 'Upcoming Feast',
-        'news-item-1-text': 'Information about an upcoming important event in the parish...',
-        'news-item-2-title': 'Church Renovation',
-        'news-item-2-text': 'Current information about renovation work in the church...',
         'footer-parish': 'St. Nicholas Orthodox Parish',
         'footer-jurisdiction': 'Jurisdiction',
         'footer-jurisdiction-text': 'Diocese of Łódź-Poznań',
@@ -94,7 +89,14 @@ const translations = {
         'benefit-2': 'Service schedule changes',
         'benefit-3': 'Reminders about holidays and celebrations',
         'whatsapp-button': 'Join WhatsApp Group',
-        'whatsapp-note': 'Click to send a message and join the group'
+        'whatsapp-note': 'Click to send a message and join the group',
+        'facebook-title': 'Visit Us on Facebook',
+        'facebook-description': 'Join our Facebook group to be part of our online community, share photos, and participate in discussions.',
+        'facebook-benefit-1': 'Join the parish community',
+        'facebook-benefit-2': 'Photos from events and services',
+        'facebook-benefit-3': 'Discussions and sharing experiences',
+        'facebook-button': 'Join Facebook Group',
+        'facebook-note': 'Click to visit our group'
     },
     uk: {
         'church-name': 'Православна парафія Св. Миколая в Торуні',
@@ -102,7 +104,6 @@ const translations = {
         'nav-about': 'Про нас',
         'nav-services': 'Богослужіння',
         'nav-contact': 'Контакти',
-        'nav-news': 'Новини',
         'hero-title': 'Православна парафія Св. Миколая в Торуні',
         'hero-subtitle': 'Живий центр православ\'я в Торуні, багатий на історію та духовну красу',
         'about-title': 'Історія парафії',
@@ -124,11 +125,6 @@ const translations = {
         'priest': 'Настоятель',
         'phone': 'Телефон',
         'email': 'Електронна пошта',
-        'news-title': 'Новини',
-        'news-item-1-title': 'Наближається свято',
-        'news-item-1-text': 'Інформація про наближаючу важливу подію в парафії...',
-        'news-item-2-title': 'Реновація церкви',
-        'news-item-2-text': 'Поточна інформація про реставраційні роботи в церкві...',
         'footer-parish': 'Православна парафія Св. Миколая',
         'footer-jurisdiction': 'Юрисдикція',
         'footer-jurisdiction-text': 'Лодзько-Познанська єпархія',
@@ -142,7 +138,14 @@ const translations = {
         'benefit-2': 'Зміни в розкладі богослужінь',
         'benefit-3': 'Нагадування про свята та урочистості',
         'whatsapp-button': 'Приєднатися до групи WhatsApp',
-        'whatsapp-note': 'Натисніть, щоб надіслати повідомлення та приєднатися до групи'
+        'whatsapp-note': 'Натисніть, щоб надіслати повідомлення та приєднатися до групи',
+        'facebook-title': 'Відвідайте нас у Facebook',
+        'facebook-description': 'Приєднуйтесь до нашої групи у Facebook, щоб бути частиною нашої онлайн-спільноти, ділитися фотографіями та брати участь у дискусіях.',
+        'facebook-benefit-1': 'Приєднуйтесь до парафіяльної спільноти',
+        'facebook-benefit-2': 'Фотографії з подій та богослужінь',
+        'facebook-benefit-3': 'Дискусії та обмін досвідом',
+        'facebook-button': 'Приєднатися до групи Facebook',
+        'facebook-note': 'Натисніть, щоб відвідати нашу групу'
     },
     ru: {
         'church-name': 'Православный приход Св. Николая в Торуни',
@@ -150,7 +153,6 @@ const translations = {
         'nav-about': 'О нас',
         'nav-services': 'Богослужения',
         'nav-contact': 'Контакты',
-        'nav-news': 'Новости',
         'hero-title': 'Православный приход Св. Николая в Торуни',
         'hero-subtitle': 'Живой центр православия в Торуни, богатый историей и духовной красотой',
         'about-title': 'История прихода',
@@ -172,11 +174,6 @@ const translations = {
         'priest': 'Настоятель',
         'phone': 'Телефон',
         'email': 'Электронная почта',
-        'news-title': 'Новости',
-        'news-item-1-title': 'Приближающийся праздник',
-        'news-item-1-text': 'Информация о приближающемся важном событии в приходе...',
-        'news-item-2-title': 'Реновация церкви',
-        'news-item-2-text': 'Текущая информация о реставрационных работах в церкви...',
         'footer-parish': 'Православный приход Св. Николая',
         'footer-jurisdiction': 'Юрисдикция',
         'footer-jurisdiction-text': 'Лодзинско-Познанская епархия',
@@ -190,7 +187,14 @@ const translations = {
         'benefit-2': 'Изменения в расписании богослужений',
         'benefit-3': 'Напоминания о праздниках и торжествах',
         'whatsapp-button': 'Присоединиться к группе WhatsApp',
-        'whatsapp-note': 'Нажмите, чтобы отправить сообщение и присоединиться к группе'
+        'whatsapp-note': 'Нажмите, чтобы отправить сообщение и присоединиться к группе',
+        'facebook-title': 'Посетите нас в Facebook',
+        'facebook-description': 'Присоединяйтесь к нашей группе в Facebook, чтобы быть частью нашего онлайн-сообщества, делиться фотографиями и участвовать в дискуссиях.',
+        'facebook-benefit-1': 'Присоединяйтесь к приходской общине',
+        'facebook-benefit-2': 'Фотографии с событий и богослужений',
+        'facebook-benefit-3': 'Дискуссии и обмен опытом',
+        'facebook-button': 'Присоединиться к группе Facebook',
+        'facebook-note': 'Нажмите, чтобы посетить нашу группу'
     },
     it: {
         'church-name': 'Parrocchia Ortodossa di San Nicola a Toruń',
@@ -198,7 +202,6 @@ const translations = {
         'nav-about': 'Chi Siamo',
         'nav-services': 'Servizi',
         'nav-contact': 'Contatti',
-        'nav-news': 'Notizie',
         'hero-title': 'Parrocchia Ortodossa di San Nicola a Toruń',
         'hero-subtitle': 'Un centro vibrante dell\'ortodossia a Toruń, ricco di storia e bellezza spirituale',
         'about-title': 'Storia della Parrocchia',
@@ -220,11 +223,6 @@ const translations = {
         'priest': 'Parroco',
         'phone': 'Telefono',
         'email': 'Email',
-        'news-title': 'Notizie',
-        'news-item-1-title': 'Festa Imminente',
-        'news-item-1-text': 'Informazioni su un importante evento imminente nella parrocchia...',
-        'news-item-2-title': 'Restauro della Chiesa',
-        'news-item-2-text': 'Informazioni attuali sui lavori di restauro nella chiesa...',
         'footer-parish': 'Parrocchia Ortodossa di San Nicola',
         'footer-jurisdiction': 'Giurisdizione',
         'footer-jurisdiction-text': 'Diocesi di Łódź-Poznań',
@@ -238,7 +236,14 @@ const translations = {
         'benefit-2': 'Cambiamenti negli orari dei servizi',
         'benefit-3': 'Promemoria su feste e celebrazioni',
         'whatsapp-button': 'Unisciti al Gruppo WhatsApp',
-        'whatsapp-note': 'Clicca per inviare un messaggio e unirti al gruppo'
+        'whatsapp-note': 'Clicca per inviare un messaggio e unirti al gruppo',
+        'facebook-title': 'Visitaci su Facebook',
+        'facebook-description': 'Unisciti al nostro gruppo Facebook per far parte della nostra comunità online, condividere foto e partecipare alle discussioni.',
+        'facebook-benefit-1': 'Unisciti alla comunità parrocchiale',
+        'facebook-benefit-2': 'Foto di eventi e servizi',
+        'facebook-benefit-3': 'Discussioni e condivisione di esperienze',
+        'facebook-button': 'Unisciti al Gruppo Facebook',
+        'facebook-note': 'Clicca per visitare il nostro gruppo'
     }
 };
 
@@ -345,7 +350,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Animation on scroll (simple fade-in effect)
 function animateOnScroll() {
-    const elements = document.querySelectorAll('.service-card, .news-card, .contact-item');
+    const elements = document.querySelectorAll('.service-card, .contact-item');
     
     elements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
@@ -360,7 +365,7 @@ function animateOnScroll() {
 
 // Initialize animations
 document.addEventListener('DOMContentLoaded', function() {
-    const elements = document.querySelectorAll('.service-card, .news-card, .contact-item');
+    const elements = document.querySelectorAll('.service-card, .contact-item');
     
     elements.forEach(element => {
         element.style.opacity = '0';
@@ -432,6 +437,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const message = 'Dzień dobry! Chciałbym dołączyć do grupy WhatsApp parafii Św. Mikołaja w Toruniu.';
             const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
+        });
+    }
+});
+
+// Facebook button functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const facebookButton = document.querySelector('.facebook-button');
+    if (facebookButton) {
+        facebookButton.addEventListener('click', function() {
+            const facebookUrl = 'https://www.facebook.com/cerkiewtorun/';
+            window.open(facebookUrl, '_blank');
         });
     }
 });
