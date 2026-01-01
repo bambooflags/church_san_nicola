@@ -551,46 +551,7 @@ body {
     font-weight: 500;
 }
 
-/* WhatsApp Section */
-.whatsapp-section {
-    padding: 4rem 0;
-    background: 
-        linear-gradient(135deg, rgba(30, 58, 138, 0.7), rgba(59, 130, 246, 0.6)),
-        url('wood.jpeg');
-    background-size: cover, cover;
-    background-position: center, center;
-    background-repeat: no-repeat, no-repeat;
-    background-attachment: fixed, fixed;
-    position: relative;
-}
-
-.whatsapp-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.whatsapp-text h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: var(--white);
-    margin-bottom: 1.5rem;
-}
-
-.whatsapp-text p {
-    font-size: 1.1rem;
-    color: var(--white);
-    line-height: 1.7;
-    margin-bottom: 2rem;
-}
-
-.whatsapp-benefits {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
+/* Benefit items (shared) */
 .benefit-item {
     display: flex;
     align-items: center;
@@ -605,53 +566,16 @@ body {
     text-align: center;
 }
 
-.whatsapp-action {
-    text-align: center;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-}
-
-.whatsapp-icon {
-    margin-bottom: 1.5rem;
-}
-
-.whatsapp-icon svg {
-    width: 80px;
-    height: 80px;
-}
-
-.whatsapp-button {
-    background: #25D366;
-    color: var(--white);
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-}
-
-.whatsapp-button:hover {
-    background: #20B454;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-}
-
-.whatsapp-note {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
-    margin: 0;
-}
-
 /* Facebook Section */
 .facebook-section {
     padding: 4rem 0;
-    background: linear-gradient(135deg, rgba(24, 119, 242, 0.9), rgba(66, 103, 178, 0.85));
+    background:
+        linear-gradient(135deg, rgba(24, 119, 242, 0.8), rgba(66, 103, 178, 0.75)),
+        url('wood.jpeg');
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
     position: relative;
 }
 
@@ -857,11 +781,6 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .whatsapp-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
     .facebook-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -871,7 +790,6 @@ body {
     .services h2,
     .contact h2,
     .news h2,
-    .whatsapp-text h2,
     .facebook-text h2 {
         font-size: 2rem;
     }

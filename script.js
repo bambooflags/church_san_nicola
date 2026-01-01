@@ -32,13 +32,6 @@ const translations = {
         'footer-services': 'Nabożeństwa',
         'footer-saturday': 'Soboty: 17:00',
         'footer-sunday': 'Niedziele: 11:00',
-        'whatsapp-title': 'Bądź na bieżąco',
-        'whatsapp-description': 'Dołącz do naszej grupy WhatsApp, aby otrzymywać najnowsze wiadomości, informacje o nadchodzących nabożeństwach i ewentualnych zmianach w harmonogramie.',
-        'benefit-1': 'Powiadomienia o ważnych wydarzeniach',
-        'benefit-2': 'Zmiany w harmonogramie nabożeństw',
-        'benefit-3': 'Przypomnienia o świętach i uroczystościach',
-        'whatsapp-button': 'Dołącz do grupy WhatsApp',
-        'whatsapp-note': 'Kliknij aby wysłać wiadomość i dołączyć do grupy',
         'facebook-title': 'Odwiedź nas na Facebooku',
         'facebook-description': 'Dołącz do naszej grupy na Facebooku, aby być częścią naszej wspólnoty online, dzielić się zdjęciami i uczestniczyć w dyskusjach.',
         'facebook-benefit-1': 'Dołącz do wspólnoty parafialnej',
@@ -79,13 +72,6 @@ const translations = {
         'footer-services': 'Services',
         'footer-saturday': 'Saturdays: 5:00 PM',
         'footer-sunday': 'Sundays: 11:00 AM',
-        'whatsapp-title': 'Stay Updated',
-        'whatsapp-description': 'Join our WhatsApp group to receive the latest news, information about upcoming services, and any schedule changes.',
-        'benefit-1': 'Notifications about important events',
-        'benefit-2': 'Service schedule changes',
-        'benefit-3': 'Reminders about holidays and celebrations',
-        'whatsapp-button': 'Join WhatsApp Group',
-        'whatsapp-note': 'Click to send a message and join the group',
         'facebook-title': 'Visit Us on Facebook',
         'facebook-description': 'Join our Facebook group to be part of our online community, share photos, and participate in discussions.',
         'facebook-benefit-1': 'Join the parish community',
@@ -126,13 +112,6 @@ const translations = {
         'footer-services': 'Богослужіння',
         'footer-saturday': 'Суботи: 17:00',
         'footer-sunday': 'Неділі: 11:00',
-        'whatsapp-title': 'Будьте в курсі',
-        'whatsapp-description': 'Приєднуйтесь до нашої групи WhatsApp, щоб отримувати найновіші новини, інформацію про наступні богослужіння та можливі зміни розкладу.',
-        'benefit-1': 'Сповіщення про важливі події',
-        'benefit-2': 'Зміни в розкладі богослужінь',
-        'benefit-3': 'Нагадування про свята та урочистості',
-        'whatsapp-button': 'Приєднатися до групи WhatsApp',
-        'whatsapp-note': 'Натисніть, щоб надіслати повідомлення та приєднатися до групи',
         'facebook-title': 'Відвідайте нас у Facebook',
         'facebook-description': 'Приєднуйтесь до нашої групи у Facebook, щоб бути частиною нашої онлайн-спільноти, ділитися фотографіями та брати участь у дискусіях.',
         'facebook-benefit-1': 'Приєднуйтесь до парафіяльної спільноти',
@@ -173,13 +152,6 @@ const translations = {
         'footer-services': 'Богослужения',
         'footer-saturday': 'Суббота: 17:00',
         'footer-sunday': 'Воскресенье: 11:00',
-        'whatsapp-title': 'Будьте в курсе',
-        'whatsapp-description': 'Присоединяйтесь к нашей группе WhatsApp, чтобы получать последние новости, информацию о предстоящих богослужениях и возможных изменениях в расписании.',
-        'benefit-1': 'Уведомления о важных событиях',
-        'benefit-2': 'Изменения в расписании богослужений',
-        'benefit-3': 'Напоминания о праздниках и торжествах',
-        'whatsapp-button': 'Присоединиться к группе WhatsApp',
-        'whatsapp-note': 'Нажмите, чтобы отправить сообщение и присоединиться к группе',
         'facebook-title': 'Посетите нас в Facebook',
         'facebook-description': 'Присоединяйтесь к нашей группе в Facebook, чтобы быть частью нашего онлайн-сообщества, делиться фотографиями и участвовать в дискуссиях.',
         'facebook-benefit-1': 'Присоединяйтесь к приходской общине',
@@ -220,13 +192,6 @@ const translations = {
         'footer-services': 'Servizi',
         'footer-saturday': 'Sabato: 17:00',
         'footer-sunday': 'Domenica: 11:00',
-        'whatsapp-title': 'Rimani Aggiornato',
-        'whatsapp-description': 'Unisciti al nostro gruppo WhatsApp per ricevere le ultime notizie, informazioni sui prossimi servizi e eventuali cambiamenti di programma.',
-        'benefit-1': 'Notifiche su eventi importanti',
-        'benefit-2': 'Cambiamenti negli orari dei servizi',
-        'benefit-3': 'Promemoria su feste e celebrazioni',
-        'whatsapp-button': 'Unisciti al Gruppo WhatsApp',
-        'whatsapp-note': 'Clicca per inviare un messaggio e unirti al gruppo',
         'facebook-title': 'Visitaci su Facebook',
         'facebook-description': 'Unisciti al nostro gruppo Facebook per far parte della nostra comunità online, condividere foto e partecipare alle discussioni.',
         'facebook-benefit-1': 'Unisciti alla comunità parrocchiale',
@@ -422,20 +387,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize first image
     showImage(0);
-});
-
-// WhatsApp button functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const whatsappButton = document.querySelector('.whatsapp-button');
-    if (whatsappButton) {
-        whatsappButton.addEventListener('click', function() {
-            // Replace with actual WhatsApp number or group invite link
-            const whatsappNumber = '48606910655'; // Parish priest's number
-            const message = 'Dzień dobry! Chciałbym dołączyć do grupy WhatsApp parafii Św. Mikołaja w Toruniu.';
-            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
-        });
-    }
 });
 
 // Facebook button functionality
