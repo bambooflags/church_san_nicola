@@ -15,13 +15,11 @@ const translations = {
         'founding-text': 'Parafia Prawosławna w Toruniu została oficjalnie otwarta 28 kwietnia 1921 roku. Początkowo, w 1924 roku, tymczasowa drewniana kaplica została pozyskana z garnizonu wojskowego.',
         'current-building': 'Obecny budynek cerkwi',
         'current-building-text': 'Obecna drewniana cerkiew parafialna została ukończona i konsekrowana w 1929 roku. Budynek pierwotnie został zbudowany w 1839 roku i został zaadaptowany z dawnego budynku klasztornego w 1939 roku.',
-        'services-title': 'Nabożeństwa',
+        'services-title': 'Nabożeństwa stałe',
         'saturday-service': 'Soboty',
-        'saturday-time': 'Święta Liturgia o 17:00',
+        'saturday-time': 'Wieczernia o 17:00',
         'sunday-service': 'Niedziele',
         'sunday-time': 'Święta Liturgia o 11:00',
-        'vigil-service': 'Wigilie świąt',
-        'vigil-time': 'Nieszpory o 17:00',
         'contact-title': 'Kontakt',
         'address': 'Adres',
         'priest': 'Proboszcz',
@@ -30,7 +28,7 @@ const translations = {
         'footer-parish': 'Parafia Prawosławna Św. Mikołaja',
         'footer-jurisdiction': 'Jurysdykcja',
         'footer-jurisdiction-text': 'Diecezja Łódzko-Poznańska',
-        'footer-archbishop': 'Arcybiskup Szymon',
+        'footer-archbishop': 'Biskup Atanazy',
         'footer-services': 'Nabożeństwa',
         'footer-saturday': 'Soboty: 17:00',
         'footer-sunday': 'Niedziele: 11:00',
@@ -64,13 +62,11 @@ const translations = {
         'founding-text': 'The Orthodox Parish of Toruń was officially opened on April 28, 1921. Initially, in 1924, a temporary wooden chapel was acquired from the military garrison.',
         'current-building': 'The Current Church Building',
         'current-building-text': 'The current wooden parish church was completed and consecrated in 1929. The building was originally constructed in 1839 and was adapted from a former monastery building in 1939.',
-        'services-title': 'Services',
+        'services-title': 'Regular Services',
         'saturday-service': 'Saturdays',
-        'saturday-time': 'Divine Liturgy at 5:00 PM',
+        'saturday-time': 'Vespers at 5:00 PM',
         'sunday-service': 'Sundays',
         'sunday-time': 'Divine Liturgy at 11:00 AM',
-        'vigil-service': 'Eve of Holidays',
-        'vigil-time': 'Vigils at 5:00 PM',
         'contact-title': 'Contact',
         'address': 'Address',
         'priest': 'Parish Priest',
@@ -79,7 +75,7 @@ const translations = {
         'footer-parish': 'St. Nicholas Orthodox Parish',
         'footer-jurisdiction': 'Jurisdiction',
         'footer-jurisdiction-text': 'Diocese of Łódź-Poznań',
-        'footer-archbishop': 'Archbishop Szymon',
+        'footer-archbishop': 'Bishop Atanazy',
         'footer-services': 'Services',
         'footer-saturday': 'Saturdays: 5:00 PM',
         'footer-sunday': 'Sundays: 11:00 AM',
@@ -113,13 +109,11 @@ const translations = {
         'founding-text': 'Православна парафія в Торуні була офіційно відкрита 28 квітня 1921 року. Спочатку, в 1924 році, тимчасова дерев\'яна каплиця була отримана від військового гарнізону.',
         'current-building': 'Поточна будівля церкви',
         'current-building-text': 'Поточна дерев\'яна парафіяльна церква була завершена і освячена в 1929 році. Будівля спочатку була побудована в 1839 році і була адаптована з колишньої монастирської будівлі в 1939 році.',
-        'services-title': 'Богослужіння',
+        'services-title': 'Постійні богослужіння',
         'saturday-service': 'Суботи',
-        'saturday-time': 'Божественна Літургія о 17:00',
+        'saturday-time': 'Вечірня о 17:00',
         'sunday-service': 'Неділі',
         'sunday-time': 'Божественна Літургія о 11:00',
-        'vigil-service': 'Напередодні свят',
-        'vigil-time': 'Вечірня о 17:00',
         'contact-title': 'Контакти',
         'address': 'Адреса',
         'priest': 'Настоятель',
@@ -128,7 +122,7 @@ const translations = {
         'footer-parish': 'Православна парафія Св. Миколая',
         'footer-jurisdiction': 'Юрисдикція',
         'footer-jurisdiction-text': 'Лодзько-Познанська єпархія',
-        'footer-archbishop': 'Архієпископ Симон',
+        'footer-archbishop': 'Єпископ Атанасій',
         'footer-services': 'Богослужіння',
         'footer-saturday': 'Суботи: 17:00',
         'footer-sunday': 'Неділі: 11:00',
@@ -162,13 +156,11 @@ const translations = {
         'founding-text': 'Православный приход в Торуни был официально открыт 28 апреля 1921 года. Первоначально, в 1924 году, временная деревянная часовня была получена от военного гарнизона.',
         'current-building': 'Текущее здание церкви',
         'current-building-text': 'Текущая деревянная приходская церковь была завершена и освящена в 1929 году. Здание первоначально было построено в 1839 году и было адаптировано из бывшего монастырского здания в 1939 году.',
-        'services-title': 'Богослужения',
+        'services-title': 'Постоянные богослужения',
         'saturday-service': 'Суббота',
-        'saturday-time': 'Божественная Литургия в 17:00',
+        'saturday-time': 'Вечерня в 17:00',
         'sunday-service': 'Воскресенье',
         'sunday-time': 'Божественная Литургия в 11:00',
-        'vigil-service': 'Накануне праздников',
-        'vigil-time': 'Вечерня в 17:00',
         'contact-title': 'Контакты',
         'address': 'Адрес',
         'priest': 'Настоятель',
@@ -177,7 +169,7 @@ const translations = {
         'footer-parish': 'Православный приход Св. Николая',
         'footer-jurisdiction': 'Юрисдикция',
         'footer-jurisdiction-text': 'Лодзинско-Познанская епархия',
-        'footer-archbishop': 'Архиепископ Симон',
+        'footer-archbishop': 'Епископ Афанасий',
         'footer-services': 'Богослужения',
         'footer-saturday': 'Суббота: 17:00',
         'footer-sunday': 'Воскресенье: 11:00',
@@ -211,13 +203,11 @@ const translations = {
         'founding-text': 'La Parrocchia Ortodossa di Toruń è stata ufficialmente aperta il 28 aprile 1921. Inizialmente, nel 1924, una cappella temporanea in legno fu acquisita dalla guarnigione militare.',
         'current-building': 'L\'edificio della Chiesa Attuale',
         'current-building-text': 'L\'attuale chiesa parrocchiale in legno è stata completata e consacrata nel 1929. L\'edificio è stato originariamente costruito nel 1839 ed è stato adattato da un ex edificio monastico nel 1939.',
-        'services-title': 'Servizi',
+        'services-title': 'Servizi regolari',
         'saturday-service': 'Sabato',
-        'saturday-time': 'Divina Liturgia alle 17:00',
+        'saturday-time': 'Vespri alle 17:00',
         'sunday-service': 'Domenica',
         'sunday-time': 'Divina Liturgia alle 11:00',
-        'vigil-service': 'Vigilia delle Feste',
-        'vigil-time': 'Vespri alle 17:00',
         'contact-title': 'Contatti',
         'address': 'Indirizzo',
         'priest': 'Parroco',
@@ -226,7 +216,7 @@ const translations = {
         'footer-parish': 'Parrocchia Ortodossa di San Nicola',
         'footer-jurisdiction': 'Giurisdizione',
         'footer-jurisdiction-text': 'Diocesi di Łódź-Poznań',
-        'footer-archbishop': 'Arcivescovo Szymon',
+        'footer-archbishop': 'Vescovo Atanazy',
         'footer-services': 'Servizi',
         'footer-saturday': 'Sabato: 17:00',
         'footer-sunday': 'Domenica: 11:00',
@@ -378,34 +368,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('scroll', animateOnScroll);
 
-// Gallery functionality
+// Hero background gallery functionality
 let currentImageIndex = 0;
-const galleryImages = document.querySelectorAll('.gallery-image');
-const indicators = document.querySelectorAll('.indicator');
+let heroImages;
+let indicators;
 
 function showImage(index) {
+    if (!heroImages || !indicators) return;
+
     // Hide all images
-    galleryImages.forEach(img => img.classList.remove('active'));
+    heroImages.forEach(img => img.classList.remove('active'));
     indicators.forEach(indicator => indicator.classList.remove('active'));
-    
+
     // Show selected image
-    if (galleryImages[index]) {
-        galleryImages[index].classList.add('active');
+    if (heroImages[index]) {
+        heroImages[index].classList.add('active');
         indicators[index].classList.add('active');
         currentImageIndex = index;
     }
 }
 
 function changeImage(direction) {
-    const totalImages = galleryImages.length;
+    if (!heroImages) return;
+    const totalImages = heroImages.length;
     let newIndex = currentImageIndex + direction;
-    
+
     if (newIndex >= totalImages) {
         newIndex = 0;
     } else if (newIndex < 0) {
         newIndex = totalImages - 1;
     }
-    
+
     showImage(newIndex);
 }
 
@@ -420,9 +413,13 @@ function autoPlayGallery() {
 
 // Initialize gallery when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize hero background images
+    heroImages = document.querySelectorAll('.hero-bg-image');
+    indicators = document.querySelectorAll('.indicator');
+
     // Set up auto-play (change image every 5 seconds)
     setInterval(autoPlayGallery, 5000);
-    
+
     // Initialize first image
     showImage(0);
 });

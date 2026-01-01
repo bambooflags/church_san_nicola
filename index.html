@@ -41,30 +41,27 @@
 
     <main>
         <section id="home" class="hero">
+            <div class="hero-background">
+                <img src="church.jpeg" alt="Orthodox Church of St. Nicholas in Toruń" class="hero-bg-image active">
+                <img src="inside.jpeg" alt="Interior of Orthodox Church of St. Nicholas" class="hero-bg-image">
+                <img src="image1.jpeg" alt="Church photo 1" class="hero-bg-image">
+                <img src="image2.jpeg" alt="Church photo 2" class="hero-bg-image">
+            </div>
+            <div class="hero-overlay"></div>
             <div class="hero-content">
-                <div class="hero-gallery">
-                    <div class="gallery-container">
-                        <div class="gallery-images">
-                            <img src="church.jpeg" alt="Orthodox Church of St. Nicholas in Toruń" class="gallery-image active">
-                            <img src="inside.jpeg" alt="Interior of Orthodox Church of St. Nicholas" class="gallery-image">
-                            <img src="image1.jpeg" alt="Church photo 1" class="gallery-image">
-                            <img src="image2.jpeg" alt="Church photo 2" class="gallery-image">
-                        </div>
-                        <button class="gallery-nav gallery-prev" onclick="changeImage(-1)">‹</button>
-                        <button class="gallery-nav gallery-next" onclick="changeImage(1)">›</button>
-                        <div class="gallery-indicators">
-                            <span class="indicator active" onclick="currentImage(1)"></span>
-                            <span class="indicator" onclick="currentImage(2)"></span>
-                            <span class="indicator" onclick="currentImage(3)"></span>
-                            <span class="indicator" onclick="currentImage(4)"></span>
-                        </div>
-                    </div>
-                </div>
                 <div class="hero-text">
                     <h2 data-key="hero-title">Parafia Prawosławna Św. Mikołaja w Toruniu</h2>
                     <p data-key="hero-subtitle">Żywe centrum prawosławia w Toruniu, bogate w historię i duchowe piękno</p>
                 </div>
+                <div class="hero-indicators">
+                    <span class="indicator active" onclick="currentImage(1)"></span>
+                    <span class="indicator" onclick="currentImage(2)"></span>
+                    <span class="indicator" onclick="currentImage(3)"></span>
+                    <span class="indicator" onclick="currentImage(4)"></span>
+                </div>
             </div>
+            <button class="hero-nav hero-prev" onclick="changeImage(-1)">‹</button>
+            <button class="hero-nav hero-next" onclick="changeImage(1)">›</button>
         </section>
 
         <section id="about" class="about">
@@ -94,7 +91,7 @@
 
         <section id="services" class="services">
             <div class="container">
-                <h2 data-key="services-title">Nabożeństwa</h2>
+                <h2 data-key="services-title">Nabożeństwa stałe</h2>
                 <div class="services-grid">
                     <div class="service-card">
                         <div class="service-icon">✝</div>
@@ -105,11 +102,6 @@
                         <div class="service-icon">☦</div>
                         <h3 data-key="sunday-service">Niedziele</h3>
                         <p data-key="sunday-time">Święta Liturgia o 11:00</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🕯</div>
-                        <h3 data-key="vigil-service">Wigilie świąt</h3>
-                        <p data-key="vigil-time">Nieszpory o 17:00</p>
                     </div>
                 </div>
             </div>
@@ -124,7 +116,7 @@
                             <div class="contact-icon">📍</div>
                             <div>
                                 <h3 data-key="address">Adres</h3>
-                                <p>ul. Podgórna 69, Toruń</p>
+                                <p><a href="https://maps.google.com/?q=Podgórna+69,+87-100+Toruń,+Poland" target="_blank" class="address-link">Podgórna 69, 87-100 Toruń, Poland</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -218,13 +210,13 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3 data-key="footer-parish">Parafia Prawosławna Św. Mikołaja</h3>
-                    <p>ul. Podgórna 69, Toruń</p>
+                    <p><a href="https://maps.google.com/?q=Podgórna+69,+87-100+Toruń,+Poland" target="_blank" class="address-link">Podgórna 69, 87-100 Toruń, Poland</a></p>
                     <p>Tel: 606 910 655</p>
                 </div>
                 <div class="footer-section">
                     <h3 data-key="footer-jurisdiction">Jurysdykcja</h3>
                     <p data-key="footer-jurisdiction-text">Diecezja Łódzko-Poznańska</p>
-                    <p data-key="footer-archbishop">Arcybiskup Szymon</p>
+                    <p data-key="footer-archbishop">Biskup Atanazy</p>
                 </div>
                 <div class="footer-section">
                     <h3 data-key="footer-services">Nabożeństwa</h3>
