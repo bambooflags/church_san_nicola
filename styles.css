@@ -439,23 +439,41 @@ body {
     font-size: 1rem;
 }
 
-.address-link {
-    color: var(--dark-gray);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.address-link:hover {
-    color: var(--primary-blue);
-    text-decoration: underline;
-}
-
-.footer .address-link {
+.maps-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--primary-blue);
     color: var(--white);
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.footer .address-link:hover {
-    color: var(--gold);
+.maps-button::before {
+    content: '📍';
+}
+
+.maps-button:hover {
+    background: var(--dark-blue);
+    transform: translateY(-1px);
+}
+
+.maps-button-footer {
+    background: transparent;
+    border: 1px solid var(--white);
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+.maps-button-footer:hover {
+    background: var(--white);
+    color: var(--primary-blue);
 }
 
 .contact-image-placeholder {

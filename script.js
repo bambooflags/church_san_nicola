@@ -38,7 +38,8 @@ const translations = {
         'facebook-benefit-2': 'Zdjęcia z wydarzeń i nabożeństw',
         'facebook-benefit-3': 'Dyskusje i wymiana doświadczeń',
         'facebook-button': 'Dołącz do grupy Facebook',
-        'facebook-note': 'Kliknij aby odwiedzić naszą grupę'
+        'facebook-note': 'Kliknij aby odwiedzić naszą grupę',
+        'open-maps': 'Otwórz w Google Maps'
     },
     en: {
         'church-name': 'St. Nicholas Orthodox Parish in Toruń',
@@ -78,7 +79,8 @@ const translations = {
         'facebook-benefit-2': 'Photos from events and services',
         'facebook-benefit-3': 'Discussions and sharing experiences',
         'facebook-button': 'Join Facebook Group',
-        'facebook-note': 'Click to visit our group'
+        'facebook-note': 'Click to visit our group',
+        'open-maps': 'Open in Google Maps'
     },
     uk: {
         'church-name': 'Православна парафія Св. Миколая в Торуні',
@@ -118,7 +120,8 @@ const translations = {
         'facebook-benefit-2': 'Фотографії з подій та богослужінь',
         'facebook-benefit-3': 'Дискусії та обмін досвідом',
         'facebook-button': 'Приєднатися до групи Facebook',
-        'facebook-note': 'Натисніть, щоб відвідати нашу групу'
+        'facebook-note': 'Натисніть, щоб відвідати нашу групу',
+        'open-maps': 'Відкрити в Google Maps'
     },
     ru: {
         'church-name': 'Православный приход Св. Николая в Торуни',
@@ -158,7 +161,8 @@ const translations = {
         'facebook-benefit-2': 'Фотографии с событий и богослужений',
         'facebook-benefit-3': 'Дискуссии и обмен опытом',
         'facebook-button': 'Присоединиться к группе Facebook',
-        'facebook-note': 'Нажмите, чтобы посетить нашу группу'
+        'facebook-note': 'Нажмите, чтобы посетить нашу группу',
+        'open-maps': 'Открыть в Google Maps'
     },
     it: {
         'church-name': 'Parrocchia Ortodossa di San Nicola a Toruń',
@@ -198,7 +202,8 @@ const translations = {
         'facebook-benefit-2': 'Foto di eventi e servizi',
         'facebook-benefit-3': 'Discussioni e condivisione di esperienze',
         'facebook-button': 'Unisciti al Gruppo Facebook',
-        'facebook-note': 'Clicca per visitare il nostro gruppo'
+        'facebook-note': 'Clicca per visitare il nostro gruppo',
+        'open-maps': 'Apri in Google Maps'
     }
 };
 
