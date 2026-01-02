@@ -81,6 +81,12 @@
         </div>
     </header>
 
+    <a href="#announcements" id="ticker" class="ticker">
+        <span class="ticker-arrow">↓</span>
+        <span data-key="ticker-text">Przejdź do ogłoszeń parafialnych</span>
+        <span class="ticker-arrow">↓</span>
+    </a>
+
     <main>
         <section id="home" class="hero">
             <div class="hero-background">
@@ -104,6 +110,12 @@
             </div>
             <button class="hero-nav hero-prev" onclick="changeImage(-1)" aria-label="Poprzednie zdjęcie">‹</button>
             <button class="hero-nav hero-next" onclick="changeImage(1)" aria-label="Następne zdjęcie">›</button>
+        </section>
+
+        <section id="announcements" class="announcements">
+            <div class="container">
+                <p id="announcement-text" data-key="announcement-default">Witamy w naszej parafii</p>
+            </div>
         </section>
 
         <section id="about" class="about">

@@ -39,7 +39,9 @@ const translations = {
         'facebook-benefit-3': 'Dyskusje i wymiana doświadczeń',
         'facebook-button': 'Dołącz do grupy Facebook',
         'facebook-note': 'Kliknij aby odwiedzić naszą grupę',
-        'open-maps': 'Otwórz w Google Maps'
+        'open-maps': 'Otwórz w Google Maps',
+        'ticker-text': 'Przejdź do ogłoszeń parafialnych',
+        'announcement-default': 'Witamy w naszej parafii'
     },
     en: {
         'church-name': 'St. Nicholas Orthodox Parish in Toruń',
@@ -80,7 +82,9 @@ const translations = {
         'facebook-benefit-3': 'Discussions and sharing experiences',
         'facebook-button': 'Join Facebook Group',
         'facebook-note': 'Click to visit our group',
-        'open-maps': 'Open in Google Maps'
+        'open-maps': 'Open in Google Maps',
+        'ticker-text': 'Go to parish announcements',
+        'announcement-default': 'Welcome to our parish'
     },
     uk: {
         'church-name': 'Православна парафія Св. Миколая в Торуні',
@@ -121,7 +125,9 @@ const translations = {
         'facebook-benefit-3': 'Дискусії та обмін досвідом',
         'facebook-button': 'Приєднатися до групи Facebook',
         'facebook-note': 'Натисніть, щоб відвідати нашу групу',
-        'open-maps': 'Відкрити в Google Maps'
+        'open-maps': 'Відкрити в Google Maps',
+        'ticker-text': 'Перейти до парафіяльних оголошень',
+        'announcement-default': 'Ласкаво просимо до нашої парафії'
     },
     ru: {
         'church-name': 'Православный приход Св. Николая в Торуни',
@@ -162,7 +168,9 @@ const translations = {
         'facebook-benefit-3': 'Дискуссии и обмен опытом',
         'facebook-button': 'Присоединиться к группе Facebook',
         'facebook-note': 'Нажмите, чтобы посетить нашу группу',
-        'open-maps': 'Открыть в Google Maps'
+        'open-maps': 'Открыть в Google Maps',
+        'ticker-text': 'Перейти к приходским объявлениям',
+        'announcement-default': 'Добро пожаловать в наш приход'
     },
     it: {
         'church-name': 'Parrocchia Ortodossa di San Nicola a Toruń',
@@ -203,7 +211,9 @@ const translations = {
         'facebook-benefit-3': 'Discussioni e condivisione di esperienze',
         'facebook-button': 'Unisciti al Gruppo Facebook',
         'facebook-note': 'Clicca per visitare il nostro gruppo',
-        'open-maps': 'Apri in Google Maps'
+        'open-maps': 'Apri in Google Maps',
+        'ticker-text': 'Vai agli annunci parrocchiali',
+        'announcement-default': 'Benvenuti nella nostra parrocchia'
     }
 };
 
@@ -404,4 +414,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Announcements from Google Sheets
+// The priest edits cell A1 in this published sheet
+
+const ANNOUNCEMENT_SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS8dcbf8EMw7iiCQYEmy5PpqiswNkAx_OecKGBHEnOJor2L65axhETZ0MX1fYHUKNnw1DYZ3CedpFSz/pub?output=csv';
+
+async function loadAnnouncements() {
+    const announcementText = document.getElementById('announcement-text');
+    if (!announcementText) return;
+
+    try {
+        const response = await fetch(ANNOUNCEMENT_SHEET_URL);
+        if (!response.ok) return;
+
+        const csvText = await response.text();
+        // Get content from first cell (A1) - trim whitespace
+        const content = csvText.split('\n')[0]?.replace(/^"|"$/g, '').trim();
+
+        if (content && content.length > 0) {
+            // Show content from Google Sheet (overrides translated default)
+            announcementText.textContent = content;
+            announcementText.removeAttribute('data-key');
+        }
+        // If no content, the default translated text remains
+    } catch (error) {
+        console.error('Error loading announcements:', error);
+        // On error, keep the default translated text
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadAnnouncements);
 

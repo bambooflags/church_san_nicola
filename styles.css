@@ -136,9 +136,9 @@ body {
 
 /* Hero Section */
 .hero {
-    margin-top: 80px;
+    margin-top: 115px;
     position: relative;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 115px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -265,6 +265,60 @@ body {
 
 .hero-next {
     right: 30px;
+}
+
+/* Ticker (announcement link under header) */
+.ticker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #B8860B;
+    z-index: 999;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 0.95rem;
+}
+
+.ticker:hover {
+    background: #9A7209;
+}
+
+.ticker-arrow {
+    font-size: 1rem;
+}
+
+/* Announcements Section */
+.announcements {
+    padding: 2rem 0;
+    background: #B8860B;
+}
+
+.announcements p {
+    color: var(--white);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+    text-align: center;
+    white-space: pre-line;
+}
+
+@media (max-width: 768px) {
+    .ticker {
+        top: 85px;
+        font-size: 0.85rem;
+        gap: 0.75rem;
+    }
+
+    .announcements p {
+        font-size: 1rem;
+    }
 }
 
 /* About Section */
@@ -766,7 +820,8 @@ body {
     }
     
     .hero {
-        min-height: calc(100vh - 80px);
+        margin-top: 120px;
+        min-height: calc(100vh - 120px);
     }
 
     .hero-text h2 {
