@@ -24,8 +24,50 @@
     <!-- Preload critical hero image -->
     <link rel="preload" as="image" href="images/church.webp" type="image/webp">
 
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Critical CSS inlined for faster first paint -->
+    <style>
+        :root{--primary-blue:#1E3A8A;--light-blue:#3B82F6;--dark-blue:#1E40AF;--gold:#FFD700;--warm-gold:#DAA520;--white:#FFFFFF;--cream:#FFF8DC;--dark-gray:#2C3E50;--light-gray:#F5F5F5}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Open Sans',sans-serif;line-height:1.6;color:var(--dark-gray);background-color:var(--white)}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+        .header{background:linear-gradient(135deg,var(--primary-blue),var(--light-blue));box-shadow:0 2px 10px rgba(0,0,0,0.2);position:fixed;width:100%;top:0;z-index:1000}
+        .header .container{display:flex;justify-content:space-between;align-items:center;padding:1rem 20px}
+        .logo{display:flex;align-items:center;gap:1rem}
+        .church-icon{font-size:2rem;color:var(--gold)}
+        .church-name{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;color:var(--white);font-weight:600}
+        .navigation{display:flex;align-items:center;gap:1.5rem}
+        .nav-menu{display:flex;list-style:none;gap:1.5rem}
+        .nav-menu a{color:var(--white);text-decoration:none;font-weight:500;white-space:nowrap;font-size:0.9rem}
+        .language-selector select{background:var(--white);border:1px solid var(--gold);color:var(--dark-gray);padding:0.5rem;border-radius:5px;font-size:0.9rem}
+        .mobile-menu-toggle{display:none;flex-direction:column;background:none;border:none;cursor:pointer;padding:0.5rem;width:30px;height:30px;justify-content:space-between}
+        .mobile-menu-toggle span{display:block;width:100%;height:3px;background:var(--white);border-radius:2px}
+        .hero{margin-top:115px;position:relative;min-height:calc(100vh - 115px);display:flex;align-items:center;justify-content:center;overflow:hidden}
+        .hero-background{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1}
+        .hero-bg-picture{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out}
+        .hero-bg-picture.active{opacity:1}
+        .hero-bg-image{width:100%;height:100%;object-fit:cover}
+        .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(30,58,138,0.4) 0%,rgba(30,58,138,0.6) 50%,rgba(30,58,138,0.8) 100%);z-index:2}
+        .hero-content{position:relative;z-index:3;text-align:center;max-width:900px;padding:2rem}
+        .hero-text h2{font-family:'Playfair Display',Georgia,serif;font-size:3.5rem;color:var(--white);margin-bottom:1.5rem;text-shadow:2px 2px 8px rgba(0,0,0,0.3)}
+        .hero-text p{font-size:1.4rem;color:var(--cream);line-height:1.8;text-shadow:1px 1px 4px rgba(0,0,0,0.3);margin-bottom:2rem}
+        .hero-indicators{display:flex;justify-content:center;gap:12px;margin-top:2rem}
+        .indicator{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,0.5);cursor:pointer;border:2px solid transparent}
+        .indicator.active{background:var(--gold);transform:scale(1.3);border-color:var(--white)}
+        .hero-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.15);color:white;border:2px solid rgba(255,255,255,0.3);width:60px;height:60px;border-radius:50%;font-size:2rem;cursor:pointer;z-index:10}
+        .hero-prev{left:30px}.hero-next{right:30px}
+        .ticker{display:flex;justify-content:center;align-items:center;gap:1rem;position:fixed;top:80px;left:0;width:100%;background:#B8860B;z-index:999;padding:0.5rem 0;text-decoration:none;cursor:pointer;color:var(--white);font-size:0.95rem}
+        @media(max-width:768px){.header .container{flex-direction:row;justify-content:space-between;align-items:center;padding:1rem 20px}.church-name{font-size:1rem}.mobile-menu-toggle{display:flex;order:3}.navigation{position:relative;order:2}.nav-menu{position:absolute;top:100%;right:0;background:var(--primary-blue);min-width:200px;flex-direction:column;gap:0;padding:1rem 0;border-radius:0 0 10px 10px;transform:translateY(-10px);opacity:0;visibility:hidden;z-index:1000}.nav-menu.active{transform:translateY(0);opacity:1;visibility:visible}.hero{margin-top:120px;min-height:calc(100vh - 120px)}.hero-text h2{font-size:2.2rem}.hero-text p{font-size:1.1rem}.hero-nav{width:50px;height:50px;font-size:1.5rem}.hero-prev{left:15px}.hero-next{right:15px}.ticker{top:85px;font-size:0.85rem;gap:0.75rem}}
+        @media(max-width:480px){.container{padding:0 15px}.hero-text h2{font-size:1.8rem}.hero-text p{font-size:1rem}.hero-nav{width:40px;height:40px;font-size:1.2rem}.hero-prev{left:10px}.hero-next{right:10px}.hero-content{padding:1.5rem}}
+    </style>
+
+    <!-- Non-blocking CSS load -->
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+
+    <!-- Non-blocking Google Fonts load -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&family=Open+Sans:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&family=Open+Sans:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&family=Open+Sans:wght@300;400;500&display=swap"></noscript>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
