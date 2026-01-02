@@ -1,3 +1,15 @@
+// Performance utilities
+function throttle(func, limit) {
+    let inThrottle;
+    return function(...args) {
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+}
+
 // Multilingual content
 const translations = {
     pl: {
@@ -274,8 +286,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Header background change on scroll
-window.addEventListener('scroll', function() {
+// Header background change on scroll (throttled for performance)
+const headerScrollHandler = throttle(function() {
     const header = document.querySelector('.header');
     if (window.scrollY > 50) {
         header.style.background = 'linear-gradient(135deg, rgba(30, 58, 138, 0.95), rgba(59, 130, 246, 0.95))';
@@ -284,7 +296,9 @@ window.addEventListener('scroll', function() {
         header.style.background = 'linear-gradient(135deg, var(--primary-blue), var(--light-blue))';
         header.style.backdropFilter = 'none';
     }
-});
+}, 100);
+
+window.addEventListener('scroll', headerScrollHandler);
 
 // Mobile menu toggle
 function toggleMobileMenu() {
@@ -321,11 +335,11 @@ document.addEventListener('DOMContentLoaded', function() {
 // Animation on scroll (simple fade-in effect)
 function animateOnScroll() {
     const elements = document.querySelectorAll('.service-card, .contact-item');
-    
+
     elements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
         const elementVisible = 150;
-        
+
         if (elementTop < window.innerHeight - elementVisible) {
             element.style.opacity = '1';
             element.style.transform = 'translateY(0)';
@@ -333,25 +347,30 @@ function animateOnScroll() {
     });
 }
 
+// Throttled scroll animation handler
+const throttledAnimateOnScroll = throttle(animateOnScroll, 100);
+
 // Initialize animations
 document.addEventListener('DOMContentLoaded', function() {
     const elements = document.querySelectorAll('.service-card, .contact-item');
-    
+
     elements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
         element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     });
-    
+
     animateOnScroll();
 });
 
-window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('scroll', throttledAnimateOnScroll);
 
 // Hero background gallery functionality
 let currentImageIndex = 0;
 let heroImages;
 let indicators;
+let galleryInterval = null;
+let isGalleryVisible = true;
 
 function showImage(index) {
     if (!heroImages || !indicators) return;
@@ -386,22 +405,54 @@ function currentImage(index) {
     showImage(index - 1); // Convert to 0-based index
 }
 
-// Auto-play gallery (optional)
+// Auto-play gallery control
 function autoPlayGallery() {
-    changeImage(1);
+    if (isGalleryVisible) {
+        changeImage(1);
+    }
+}
+
+function startGalleryAutoPlay() {
+    if (!galleryInterval) {
+        galleryInterval = setInterval(autoPlayGallery, 5000);
+    }
+}
+
+function stopGalleryAutoPlay() {
+    if (galleryInterval) {
+        clearInterval(galleryInterval);
+        galleryInterval = null;
+    }
 }
 
 // Initialize gallery when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize hero background images
-    heroImages = document.querySelectorAll('.hero-bg-image');
+    // Initialize hero background pictures (using picture elements now)
+    heroImages = document.querySelectorAll('.hero-bg-picture');
     indicators = document.querySelectorAll('.indicator');
-
-    // Set up auto-play (change image every 5 seconds)
-    setInterval(autoPlayGallery, 5000);
 
     // Initialize first image
     showImage(0);
+
+    // Set up Intersection Observer to pause autoplay when not visible
+    const heroSection = document.querySelector('.hero');
+    if (heroSection && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                isGalleryVisible = entry.isIntersecting;
+                if (entry.isIntersecting) {
+                    startGalleryAutoPlay();
+                } else {
+                    stopGalleryAutoPlay();
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(heroSection);
+    } else {
+        // Fallback: just start autoplay without visibility detection
+        startGalleryAutoPlay();
+    }
 });
 
 // Facebook button functionality

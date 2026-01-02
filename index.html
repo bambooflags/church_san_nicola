@@ -17,6 +17,13 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://www.cerkiewtorun.pl/">
 
+    <!-- Preconnect to external origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload critical hero image -->
+    <link rel="preload" as="image" href="images/church.webp" type="image/webp">
+
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -90,10 +97,22 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-background">
-                <img src="church.jpeg" alt="Orthodox Church of St. Nicholas in Toruń" class="hero-bg-image active">
-                <img src="inside.jpeg" alt="Interior of Orthodox Church of St. Nicholas" class="hero-bg-image" loading="lazy">
-                <img src="image1.jpeg" alt="Ikonostas cerkwi św. Mikołaja w Toruniu" class="hero-bg-image" loading="lazy">
-                <img src="image2.jpeg" alt="Wnętrze drewnianej cerkwi prawosławnej" class="hero-bg-image" loading="lazy">
+                <picture class="hero-bg-picture active">
+                    <source type="image/webp" srcset="images/church-480.webp 480w, images/church-768.webp 768w, images/church-1200.webp 1200w, images/church.webp 1920w" sizes="100vw">
+                    <img src="images/church.jpeg" srcset="images/church-480.jpeg 480w, images/church-768.jpeg 768w, images/church-1200.jpeg 1200w, images/church.jpeg 1920w" sizes="100vw" alt="Orthodox Church of St. Nicholas in Toruń" class="hero-bg-image" width="1920" height="1280" fetchpriority="high">
+                </picture>
+                <picture class="hero-bg-picture">
+                    <source type="image/webp" srcset="images/inside-480.webp 480w, images/inside-768.webp 768w, images/inside-1200.webp 1200w, images/inside.webp 1920w" sizes="100vw">
+                    <img src="images/inside.jpeg" srcset="images/inside-480.jpeg 480w, images/inside-768.jpeg 768w, images/inside-1200.jpeg 1200w, images/inside.jpeg 1920w" sizes="100vw" alt="Interior of Orthodox Church of St. Nicholas" class="hero-bg-image" width="1920" height="1280" loading="lazy">
+                </picture>
+                <picture class="hero-bg-picture">
+                    <source type="image/webp" srcset="images/image1-480.webp 480w, images/image1-768.webp 768w, images/image1-1200.webp 1200w, images/image1.webp 1920w" sizes="100vw">
+                    <img src="images/image1.jpeg" srcset="images/image1-480.jpeg 480w, images/image1-768.jpeg 768w, images/image1-1200.jpeg 1200w, images/image1.jpeg 1920w" sizes="100vw" alt="Ikonostas cerkwi św. Mikołaja w Toruniu" class="hero-bg-image" width="1920" height="1280" loading="lazy">
+                </picture>
+                <picture class="hero-bg-picture">
+                    <source type="image/webp" srcset="images/image2-480.webp 480w, images/image2-768.webp 768w, images/image2-1200.webp 1200w, images/image2.webp 1920w" sizes="100vw">
+                    <img src="images/image2.jpeg" srcset="images/image2-480.jpeg 480w, images/image2-768.jpeg 768w, images/image2-1200.jpeg 1200w, images/image2.jpeg 1920w" sizes="100vw" alt="Wnętrze drewnianej cerkwi prawosławnej" class="hero-bg-image" width="1920" height="1280" loading="lazy">
+                </picture>
             </div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
@@ -138,7 +157,10 @@
                             <p data-key="current-building-text">Obecna drewniana cerkiew parafialna została ukończona i konsekrowana w 1929 roku. Budynek pierwotnie został zbudowany w 1839 roku i został zaadaptowany z dawnego budynku klasztornego w 1939 roku.</p>
                         </div>
                     </div>
-                    <img src="inside.jpeg" alt="Interior of Orthodox Church of St. Nicholas" class="about-image" loading="lazy">
+                    <picture>
+                        <source type="image/webp" srcset="images/inside-480.webp 480w, images/inside-768.webp 768w, images/inside-1200.webp 1200w, images/inside.webp 1920w" sizes="(max-width: 768px) 100vw, 400px">
+                        <img src="images/inside.jpeg" srcset="images/inside-480.jpeg 480w, images/inside-768.jpeg 768w, images/inside-1200.jpeg 1200w, images/inside.jpeg 1920w" sizes="(max-width: 768px) 100vw, 400px" alt="Interior of Orthodox Church of St. Nicholas" class="about-image" width="1920" height="1280" loading="lazy">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -196,7 +218,10 @@
                             </div>
                         </div>
                     </div>
-                    <img src="image1.jpeg" alt="Widok cerkwi prawosławnej w Toruniu" class="contact-image" loading="lazy">
+                    <picture>
+                        <source type="image/webp" srcset="images/image1-480.webp 480w, images/image1-768.webp 768w, images/image1-1200.webp 1200w, images/image1.webp 1920w" sizes="(max-width: 768px) 100vw, 50vw">
+                        <img src="images/image1.jpeg" srcset="images/image1-480.jpeg 480w, images/image1-768.jpeg 768w, images/image1-1200.jpeg 1200w, images/image1.jpeg 1920w" sizes="(max-width: 768px) 100vw, 50vw" alt="Widok cerkwi prawosławnej w Toruniu" class="contact-image" width="1920" height="1280" loading="lazy">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -257,6 +282,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
