@@ -480,8 +480,16 @@ async function loadAnnouncements() {
         if (!response.ok) return;
 
         const csvText = await response.text();
-        // Get content from first cell (A1) - trim whitespace
-        const content = csvText.split('\n')[0]?.replace(/^"|"$/g, '').trim();
+        // Extract cell A1 — if it contains newlines, CSV wraps it in quotes
+        let content;
+        if (csvText.startsWith('"')) {
+            // Quoted cell: find closing quote, unescape doubled quotes
+            const endQuote = csvText.indexOf('"\n') !== -1 ? csvText.indexOf('"\n') : csvText.indexOf('"', 1);
+            content = csvText.substring(1, endQuote).replace(/""/g, '"');
+        } else {
+            content = csvText.split('\n')[0];
+        }
+        content = content?.trim();
 
         if (content && content.length > 0) {
             // Split on double newlines for paragraphs, single newlines become <br>
