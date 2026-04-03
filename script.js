@@ -484,8 +484,11 @@ async function loadAnnouncements() {
         const content = csvText.split('\n')[0]?.replace(/^"|"$/g, '').trim();
 
         if (content && content.length > 0) {
-            // Show content from Google Sheet (overrides translated default)
-            announcementText.textContent = content;
+            // Split on double newlines for paragraphs, single newlines become <br>
+            const paragraphs = content.split(/\n\n+/).filter(p => p.trim());
+            announcementText.innerHTML = paragraphs
+                .map(p => '<p>' + p.replace(/\n/g, '<br>') + '</p>')
+                .join('');
             announcementText.removeAttribute('data-key');
         }
         // If no content, the default translated text remains

@@ -318,13 +318,21 @@ body {
     background: #B8860B;
 }
 
-.announcements p {
+#announcement-text {
     color: var(--white);
     font-size: 1.1rem;
     line-height: 1.7;
-    margin: 0;
-    text-align: center;
-    white-space: pre-line;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#announcement-text p {
+    margin-bottom: 1rem;
+}
+
+#announcement-text p:last-child {
+    margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
@@ -334,7 +342,7 @@ body {
         gap: 0.75rem;
     }
 
-    .announcements p {
+    #announcement-text {
         font-size: 1rem;
     }
 }
