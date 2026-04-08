@@ -157,6 +157,8 @@ Card layout: 3 columns on desktop, 1 column on mobile (responsive grid). Card st
 - `latest-title` — section heading ("Aktualności" / "Latest News" / etc.)
 - `latest-read-more` — "Czytaj więcej →" / "Read more →" / etc.
 - `latest-date-locale` — BCP-47 locale string per language (e.g., `pl-PL`, `en-GB`) used by `Intl.DateTimeFormat` to format card dates
+- `post-back-home` — back-link text on `post.html` ("← Strona główna" / etc.)
+- `post-not-found` — error state message on `post.html` ("Post nie znaleziony" / etc.)
 
 Card titles and summaries themselves stay in Polish — not translated.
 
