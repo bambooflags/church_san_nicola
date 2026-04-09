@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parafia Prawosławna Św. Mikołaja w Toruniu</title>
+    <meta name="description" content="Parafia Prawosławna pw. Św. Mikołaja w Toruniu.">
+    <link rel="canonical" href="https://www.cerkiewtorun.pl/post.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&family=Open+Sans:wght@300;400;500&display=swap">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="display:flex;align-items:center;gap:1rem;text-decoration:none">
+                    <img src="images/icons/orthodox-cross.svg" alt="" class="church-icon" width="32" height="32">
+                    <h1 class="church-name" data-key="church-name">Parafia Prawosławna Św. Mikołaja w Toruniu</h1>
+                </a>
+            </div>
+            <nav class="navigation">
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu nawigacji">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home" data-key="nav-home">Strona Główna</a></li>
+                    <li><a href="index.html#about" data-key="nav-about">O Nas</a></li>
+                    <li><a href="index.html#services" data-key="nav-services">Nabożeństwa</a></li>
+                    <li><a href="index.html#contact" data-key="nav-contact">Kontakt</a></li>
+                </ul>
+                <div class="language-selector">
+                    <select id="language-select" aria-label="Wybierz język">
+                        <option value="pl">Polski</option>
+                        <option value="en">English</option>
+                        <option value="uk">Українська</option>
+                        <option value="ru">Русский</option>
+                        <option value="it">Italiano</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="post-main">
+        <div class="container">
+            <a href="index.html" class="post-back" data-key="post-back-home">← Strona główna</a>
+            <article class="post-article" id="post-article" hidden>
+                <header>
+                    <h1 id="post-title"></h1>
+                    <p class="post-meta" id="post-date"></p>
+                </header>
+                <div class="post-body" id="post-body"></div>
+            </article>
+            <div class="post-error" id="post-error" hidden>
+                <p data-key="post-not-found">Post nie znaleziony.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-key="footer-parish">Parafia Prawosławna Św. Mikołaja</h3>
+                    <p>Podgórna 69, 87-100 Toruń, Poland</p>
+                    <a href="https://maps.app.goo.gl/gvNeytdZkLkNAUy39" target="_blank" class="maps-button maps-button-footer" data-key="open-maps">Otwórz w Google Maps</a>
+                    <p>Tel: 606 910 655</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-key="footer-jurisdiction">Jurysdykcja</h3>
+                    <p data-key="footer-jurisdiction-text">Diecezja Łódzko-Poznańska</p>
+                    <p data-key="footer-archbishop">Biskup Atanazy</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-key="footer-services">Nabożeństwa</h3>
+                    <p data-key="footer-saturday">Soboty: 17:00</p>
+                    <p data-key="footer-sunday">Niedziele: 11:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Parafia Prawosławna Św. Mikołaja w Toruniu</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"
+        integrity="sha384-/TQbtLCAerC3jgaim+N78RZSDYV7ryeoBCVqTuzRrFec2akfBkHS7ACQ3PQhvMVi"
+        crossorigin="anonymous"
+        defer></script>
+    <script src="post-viewer.js" defer></script>
+</body>
+</html>
