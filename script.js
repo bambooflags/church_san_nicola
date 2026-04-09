@@ -53,7 +53,12 @@ const translations = {
         'facebook-note': 'Kliknij aby odwiedzić naszą grupę',
         'open-maps': 'Otwórz w Google Maps',
         'ticker-text': 'Przejdź do ogłoszeń parafialnych',
-        'announcement-default': 'Witamy w naszej parafii'
+        'announcement-default': 'Witamy w naszej parafii',
+        'latest-title': 'Aktualności',
+        'latest-read-more': 'Czytaj więcej →',
+        'latest-date-locale': 'pl-PL',
+        'post-back-home': '← Strona główna',
+        'post-not-found': 'Post nie znaleziony.'
     },
     en: {
         'church-name': 'St. Nicholas Orthodox Parish in Toruń',
@@ -96,7 +101,12 @@ const translations = {
         'facebook-note': 'Click to visit our group',
         'open-maps': 'Open in Google Maps',
         'ticker-text': 'Go to parish announcements',
-        'announcement-default': 'Welcome to our parish'
+        'announcement-default': 'Welcome to our parish',
+        'latest-title': 'Latest News',
+        'latest-read-more': 'Read more →',
+        'latest-date-locale': 'en-GB',
+        'post-back-home': '← Home',
+        'post-not-found': 'Post not found.'
     },
     uk: {
         'church-name': 'Православна парафія Св. Миколая в Торуні',
@@ -139,7 +149,12 @@ const translations = {
         'facebook-note': 'Натисніть, щоб відвідати нашу групу',
         'open-maps': 'Відкрити в Google Maps',
         'ticker-text': 'Перейти до парафіяльних оголошень',
-        'announcement-default': 'Ласкаво просимо до нашої парафії'
+        'announcement-default': 'Ласкаво просимо до нашої парафії',
+        'latest-title': 'Актуальне',
+        'latest-read-more': 'Читати далі →',
+        'latest-date-locale': 'uk-UA',
+        'post-back-home': '← Головна',
+        'post-not-found': 'Публікацію не знайдено.'
     },
     ru: {
         'church-name': 'Православный приход Св. Николая в Торуни',
@@ -182,7 +197,12 @@ const translations = {
         'facebook-note': 'Нажмите, чтобы посетить нашу группу',
         'open-maps': 'Открыть в Google Maps',
         'ticker-text': 'Перейти к приходским объявлениям',
-        'announcement-default': 'Добро пожаловать в наш приход'
+        'announcement-default': 'Добро пожаловать в наш приход',
+        'latest-title': 'Актуальное',
+        'latest-read-more': 'Читать далее →',
+        'latest-date-locale': 'ru-RU',
+        'post-back-home': '← Главная',
+        'post-not-found': 'Публикация не найдена.'
     },
     it: {
         'church-name': 'Parrocchia Ortodossa di San Nicola a Toruń',
@@ -225,7 +245,12 @@ const translations = {
         'facebook-note': 'Clicca per visitare il nostro gruppo',
         'open-maps': 'Apri in Google Maps',
         'ticker-text': 'Vai agli annunci parrocchiali',
-        'announcement-default': 'Benvenuti nella nostra parrocchia'
+        'announcement-default': 'Benvenuti nella nostra parrocchia',
+        'latest-title': 'Ultime notizie',
+        'latest-read-more': 'Leggi di più →',
+        'latest-date-locale': 'it-IT',
+        'post-back-home': '← Home',
+        'post-not-found': 'Articolo non trovato.'
     }
 };
 
