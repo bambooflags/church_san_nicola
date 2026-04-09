@@ -533,3 +533,57 @@ async function loadAnnouncements() {
 
 document.addEventListener('DOMContentLoaded', loadAnnouncements);
 
+
+// Latest posts cards (homepage)
+// Fetches posts/index.json, renders up to 3 newest posts as cards.
+// Hides the entire section if there are no posts or the fetch fails.
+async function loadLatestPosts() {
+    const section = document.getElementById('latest-posts');
+    const grid = document.getElementById('latest-posts-grid');
+    if (!section || !grid) return;
+
+    try {
+        const response = await fetch('posts/index.json', { cache: 'no-cache' });
+        if (!response.ok) throw new Error('manifest fetch failed: ' + response.status);
+        const posts = await response.json();
+        if (!Array.isArray(posts) || posts.length === 0) {
+            section.style.display = 'none';
+            return;
+        }
+
+        const lang = localStorage.getItem('selectedLanguage') || 'pl';
+        const locale = (translations[lang] && translations[lang]['latest-date-locale']) || 'pl-PL';
+        const readMore = (translations[lang] && translations[lang]['latest-read-more']) || 'Czytaj więcej →';
+        const fmt = new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'long', year: 'numeric' });
+
+        grid.innerHTML = posts.slice(0, 3).map(p => {
+            const safeTitle = escapeHtml(p.title);
+            const safeSummary = escapeHtml(p.summary);
+            const safeSlug = encodeURIComponent(p.slug);
+            const displayDate = fmt.format(new Date(p.date));
+            return `
+                <article class="post-card">
+                    <time class="post-card-date" datetime="${escapeHtml(p.date)}">${escapeHtml(displayDate)}</time>
+                    <h3 class="post-card-title">${safeTitle}</h3>
+                    <p class="post-card-summary">${safeSummary}</p>
+                    <a class="post-card-link" href="post.html?slug=${safeSlug}">${escapeHtml(readMore)}</a>
+                </article>
+            `;
+        }).join('');
+    } catch (err) {
+        console.error('loadLatestPosts:', err);
+        section.style.display = 'none';
+    }
+}
+
+function escapeHtml(str) {
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+document.addEventListener('DOMContentLoaded', loadLatestPosts);
+
