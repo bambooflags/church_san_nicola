@@ -38,7 +38,7 @@ Facebook: Parafia Prawosławna św. Mikołaja w Toruniu
 <tr><td>11/12.04.</td><td>Sobota w nocy<br><em>В ночі</em></td><td>23:30</td><td>Główne nabożeństwo paschalne i Paschalna Św. Liturgia — <em>Головна пасхальна літургія</em>. Po nabożeństwie: poświęcenie pokarmów.</td></tr>
 <tr><td>12.04.</td><td>Niedziela</td><td>11:00</td><td>Nabożeństwo wielkanocne i poświęcenie pokarmów</td></tr>
 <tr><td>12.04.</td><td>Niedziela</td><td>18:00</td><td>Wieczorne nabożeństwo paschalne i poświęcenie pokarmów</td></tr>
-<tr><td>13.04.</td><td>Poniedziałek</td><td>11:00</td><td>Paschalna Św. Liturgia</td></tr>
+<tr><td>13.04.</td><td>Poniedziałek</td><td>09:00</td><td>Paschalna Św. Liturgia</td></tr>
 <tr><td>18.04.</td><td>Sobota</td><td>17:00</td><td>Wieczernia i Panichida — modlitwy za zmarłych (<em>służba za померлих</em>)</td></tr>
 <tr><td>19.04.</td><td>Niedziela <em>Проводна неділя</em></td><td>11:00</td><td>Św. Liturgia i Panichida — modlitwy za zmarłych</td></tr>
 </tbody>
